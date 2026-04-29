@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 <link rel="stylesheet" href="css/styles.css">
-<title>Amina Mustafa - Portfolio</title>
+<title>Amina Mustafa — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-
 </head>
 <body>
 
-<div id="cur"></div>
-<div id="curR"></div>
+<!-- ═══ TOP UTILITY BAR ═══ -->
+<div id="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-name">Amina Mustafa · Portfolio 2026</span>
+    <div class="topbar-controls">
+      <div class="lang-toggle">
+        <button id="btnEN" class="on" onclick="setLang('en')">EN</button>
+        <button id="btnES" onclick="setLang('es')">ES</button>
+      </div>
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">
+        <span id="themeIcon">☾</span>
+      </button>
+      <a href="assets/cv/CV_LatifAnsari,Amina.pdf" download class="resume-btn">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-en="Resume" data-es="CV">Resume</span>
+      </a>
+    </div>
+  </div>
+</div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-left">
+<!-- ═══ MAIN NAV ═══ -->
+<nav id="mainnav">
+  <div class="nav-inner">
     <div class="logo">AM</div>
     <div class="nav-links">
+      <a href="#hero"       data-en="Home"       data-es="Inicio">Home</a>
       <a href="#about"      data-en="About"      data-es="Sobre mí">About</a>
       <a href="#education"  data-en="Education"  data-es="Formación">Education</a>
       <a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a>
@@ -26,44 +43,35 @@
       <a href="#contact"    data-en="Contact"    data-es="Contacto">Contact</a>
     </div>
   </div>
-  <div class="nav-right">
-    <div class="lang-toggle">
-      <button id="btnEN" class="on" onclick="setLang('en')">EN</button>
-      <button id="btnES"            onclick="setLang('es')">ES</button>
-    </div>
-    <!-- Replace href with your actual CV PDF path once uploaded -->
-    <a href="cv.pdf" download="Amina_Mustafa_CV.pdf" class="resume-btn" id="resumeBtn">
-      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      <span data-en="Resume" data-es="CV">Resume</span>
-    </a>
-  </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section id="hero">
-  <div class="hero-tag" data-en="&#9632; Web Developer &amp; Student" data-es="&#9632; Desarrolladora Web &amp; Estudiante">&#9632; Web Developer &amp; Student</div>
-  <div class="img-wrap" id="imgWrap" title="Click to upload photo">
-    <span data-en="Your photo" data-es="Tu foto">Your photo</span>
-    <img id="heroImg" src="" alt="Amina Mustafa"/>
-    <input type="file" id="imgInput" accept="image/*" style="display:none"/>
-  </div>
-  <h1 data-en="Hi, I'm<br/><span class='acc'>Amina.</span>" data-es="Hola, soy<br/><span class='acc'>Amina.</span>">Hi, I'm<br/><span class="acc">Amina.</span></h1>
-  <p class="hero-sub" id="heroSub"
-    data-en="A web development student focused on building robust, user-centred applications — from database architecture to polished interfaces."
-    data-es="Estudiante de desarrollo web enfocada en crear aplicaciones robustas y centradas en el usuario — desde la arquitectura de bases de datos hasta interfaces pulidas.">
-    A web development student focused on building robust, user-centred applications — from database architecture to polished interfaces.
-  </p>
-  <div class="cta">
-    <a href="#projects" class="btn" data-en="View Projects" data-es="Ver Proyectos">View Projects</a>
-    <a href="#contact"  class="btn ghost" data-en="Get in Touch" data-es="Contactar">Get in Touch</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag" data-en="Web Developer &amp; Student" data-es="Desarrolladora Web &amp; Estudiante">Web Developer &amp; Student</div>
+      <h1 data-en="Hi, I'm <span class='acc'>Amina.</span>" data-es="Hola, soy <span class='acc'>Amina.</span>">Hi, I'm <span class="acc">Amina.</span></h1>
+      <p class="hero-sub"
+        data-en="A web development student focused on building robust, user-centred applications — from database architecture to polished interfaces."
+        data-es="Estudiante de desarrollo web enfocada en crear aplicaciones robustas y centradas en el usuario — desde la arquitectura de bases de datos hasta interfaces pulidas.">
+        A web development student focused on building robust, user-centred applications — from database architecture to polished interfaces.
+      </p>
+      <div class="cta">
+        <a href="#projects" class="btn" data-en="View Projects" data-es="Ver Proyectos">View Projects</a>
+        <a href="#contact"  class="btn ghost" data-en="Get in Touch" data-es="Contactar">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/images/profilePicture.jpeg" alt="Amina Mustafa"/>
+    </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ABOUT -->
+<!-- ═══ ABOUT ═══ -->
 <section id="about">
-  <p class="sec-label reveal" data-en="&#9632; 01 — About" data-es="&#9632; 01 — Sobre mí">&#9632; 01 — About</p>
+  <p class="sec-label reveal" data-en="01 — About" data-es="01 — Sobre mí">01 — About</p>
   <h2 class="reveal" data-en="Who I Am" data-es="Quién soy">Who I Am</h2>
   <div class="about-grid">
     <div class="about-text reveal">
@@ -72,12 +80,12 @@
         I'm a <strong>full-stack web development student</strong> at Institut Tecnològic de Barcelona, building real-world applications with modern tools across the entire stack.
       </p>
       <p data-en="My background spans <strong>database design</strong>, object-oriented programming in Kotlin and PHP, REST API integration, and front-end development — with a growing interest in clean architecture and scalable systems."
-         data-es="Mi formación abarca el <strong>diseño de bases de datos</strong>, programación orientada a objetos en Kotlin y PHP, integración de APIs REST y desarrollo front-end — con un interés creciente en arquitecturas limpias y sistemas escalables.">
+         data-es="Mi formación abarca el <strong>diseño de bases de datos</strong>, programación orientada a objetos en Kotlin y PHP, integración de APIs REST y desarrollo front-end — con interés creciente en arquitecturas limpias y sistemas escalables.">
         My background spans <strong>database design</strong>, object-oriented programming in Kotlin and PHP, REST API integration, and front-end development — with a growing interest in clean architecture and scalable systems.
       </p>
-      <p data-en="As a <strong>native English speaker</strong> with multilingual fluency, I bring communication skills that bridge technical and international teams effectively."
-         data-es="Como <strong>hablante nativa de inglés</strong> con fluidez multilingüe, aporto habilidades comunicativas que conectan equipos técnicos e internacionales de forma efectiva.">
-        As a <strong>native English speaker</strong> with multilingual fluency, I bring communication skills that bridge technical and international teams effectively.
+      <p data-en="As a <strong>native English speaker</strong> with multilingual fluency across five languages, I bridge technical and international teams effectively."
+         data-es="Como <strong>hablante nativa de inglés</strong> con fluidez multilingüe en cinco idiomas, conecto equipos técnicos e internacionales de forma efectiva.">
+        As a <strong>native English speaker</strong> with multilingual fluency across five languages, I bridge technical and international teams effectively.
       </p>
       <div class="chips">
         <span class="chip">HTML5 / CSS3</span>
@@ -86,6 +94,7 @@
         <span class="chip">Kotlin</span>
         <span class="chip">SQL / SQLite</span>
         <span class="chip">Git</span>
+        <span class="chip">Linux</span>
         <span class="chip">Supabase</span>
         <span class="chip">Power BI</span>
         <span class="chip">REST APIs</span>
@@ -106,9 +115,9 @@
 
 <div class="divider"></div>
 
-<!-- EDUCATION -->
+<!-- ═══ EDUCATION ═══ -->
 <section id="education">
-  <p class="sec-label reveal" data-en="&#9632; 02 — Education" data-es="&#9632; 02 — Formación">&#9632; 02 — Education</p>
+  <p class="sec-label reveal" data-en="02 — Education" data-es="02 — Formación">02 — Education</p>
   <h2 class="reveal" data-en="Academic Background" data-es="Formación Académica">Academic Background</h2>
   <div class="edu-grid reveal">
     <div class="edu-card">
@@ -127,11 +136,6 @@
       <div class="edu-place">Netcom Training, Birmingham</div>
     </div>
     <div class="edu-card">
-      <div class="edu-date">2023</div>
-      <div class="edu-title">GCSEs — Maths &amp; English</div>
-      <div class="edu-place">M.E. School, Birmingham</div>
-    </div>
-    <div class="edu-card">
       <div class="edu-date">2018 – 2020</div>
       <div class="edu-title" data-en="High School Diploma (9.00)" data-es="Bachillerato (9,00)">High School Diploma (9.00)</div>
       <div class="edu-place">Punjab Group of Colleges, Pakistan</div>
@@ -141,122 +145,155 @@
 
 <div class="divider"></div>
 
-<!-- EXPERIENCE -->
+<!-- ═══ EXPERIENCE ═══ -->
 <section id="experience">
-  <p class="sec-label reveal" data-en="&#9632; 03 — Experience" data-es="&#9632; 03 — Experiencia">&#9632; 03 — Experience</p>
-  <h2 class="reveal" data-en="Work Experience" data-es="Experiencia Laboral">Work Experience</h2>
+  <p class="sec-label reveal" data-en="03 — Experience" data-es="03 — Experiencia">03 — Experience</p>
+  <h2 class="reveal" data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h2>
   <div class="tl reveal">
+
     <div class="ti">
-      <div class="ti-meta"><span class="ti-date">2025 – Present</span><span class="ti-place">Primark · Barcelona</span></div>
+      <div class="ti-meta">
+        <span class="ti-date">2025 – Present</span>
+        <span class="ti-place">Primark · Barcelona</span>
+      </div>
       <div class="ti-title" data-en="Sales Assistant" data-es="Asistente de Ventas">Sales Assistant</div>
-      <p class="ti-desc" data-en="Customer service, product advising and visual merchandising to brand standards."
-                         data-es="Atención al cliente, asesoramiento de producto y mantenimiento visual según los estándares de la marca.">
-        Customer service, product advising and visual merchandising to brand standards.
-      </p>
+      <ul class="ti-list">
+        <li data-en="Communicated product details to customers in a fast-paced retail environment, developing clear and concise communication skills" data-es="Comunicó detalles de productos en un entorno minorista de ritmo rápido, desarrollando habilidades de comunicación claras y concisas">Communicated product details to customers in a fast-paced retail environment, developing clear and concise communication skills</li>
+        <li data-en="Built trust and managed client relationships across a diverse, international customer base" data-es="Construyó relaciones de confianza con una base de clientes diversa e internacional">Built trust and managed client relationships across a diverse, international customer base</li>
+        <li data-en="Solved customer problems under time pressure, adapting approach to each individual situation" data-es="Resolvió problemas de clientes bajo presión, adaptando el enfoque a cada situación">Solved customer problems under time pressure, adapting approach to each individual situation</li>
+        <li data-en="Maintained visual merchandising standards, demonstrating attention to detail and brand consistency" data-es="Mantuvo estándares de visual merchandising, demostrando atención al detalle y consistencia de marca">Maintained visual merchandising standards, demonstrating attention to detail and brand consistency</li>
+      </ul>
     </div>
+
     <div class="ti">
-      <div class="ti-meta"><span class="ti-date">2024 – 2025</span><span class="ti-place">Condis · Barcelona</span></div>
+      <div class="ti-meta">
+        <span class="ti-date">2024 – 2025</span>
+        <span class="ti-place">Condis · Barcelona</span>
+      </div>
       <div class="ti-title" data-en="Cashier" data-es="Cajera">Cashier</div>
-      <p class="ti-desc" data-en="Till operations, returns handling and customer assistance in a supermarket environment."
-                         data-es="Cobro en caja, gestión de devoluciones y atención al cliente en entorno de supermercado.">
-        Till operations, returns handling and customer assistance in a supermarket environment.
-      </p>
+      <ul class="ti-list">
+        <li data-en="Managed high-volume transactions accurately while working to daily performance targets" data-es="Gestionó transacciones de alto volumen con precisión, cumpliendo objetivos diarios de rendimiento">Managed high-volume transactions accurately while working to daily performance targets</li>
+        <li data-en="Resolved customer complaints calmly and efficiently, demonstrating problem-solving under pressure" data-es="Resolvió reclamaciones de clientes de forma calmada y eficiente, demostrando resolución de problemas bajo presión">Resolved customer complaints calmly and efficiently, demonstrating problem-solving under pressure</li>
+        <li data-en="Collaborated with team members during peak hours to maintain consistent service quality" data-es="Colaboró con compañeros durante horas pico para mantener una calidad de servicio constante">Collaborated with team members during peak hours to maintain consistent service quality</li>
+        <li data-en="Built rapport with regular customers, strengthening interpersonal and adaptability skills" data-es="Estableció relaciones con clientes habituales, fortaleciendo habilidades interpersonales y de adaptabilidad">Built rapport with regular customers, strengthening interpersonal and adaptability skills</li>
+      </ul>
     </div>
+
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- PROJECTS -->
+<!-- ═══ PROJECTS ═══ -->
 <section id="projects">
-  <p class="sec-label reveal" data-en="&#9632; 04 — Projects" data-es="&#9632; 04 — Proyectos">&#9632; 04 — Projects</p>
+  <p class="sec-label reveal" data-en="04 — Projects" data-es="04 — Proyectos">04 — Projects</p>
   <h2 class="reveal" data-en="What I've Built" data-es="Lo que he construido">What I've Built</h2>
+
+  <!-- 24H ACHIEVEMENT -->
+  <div class="achievement-banner reveal">
+    <div class="ach-img-wrap">
+      <img src="assets/images/24hInnovacion.png" alt="24h d'Innovació"/>
+    </div>
+    <div class="ach-content">
+      <div class="ach-badge" data-en="&#11088; Featured Achievement" data-es="&#11088; Logro Destacado">&#11088; Featured Achievement</div>
+      <div class="ach-title" data-en="24h d'Innovació — ITB" data-es="24h d'Innovació — ITB">24h d'Innovació — ITB</div>
+      <p class="ach-desc"
+        data-en="Participated in a 24-hour innovation hackathon where FP talent solves real challenges set by major companies. Our solution was <strong>selected by the company</strong> from all participating teams — validated by Generalitat de Catalunya and CaixaBank."
+        data-es="Participé en un hackathon de innovación de 24h donde el talento de FP resuelve retos reales de grandes empresas. Nuestra solución fue <strong>seleccionada por la empresa</strong> entre todos los equipos — validada por la Generalitat de Catalunya y CaixaBank.">
+        Participated in a 24-hour innovation hackathon where FP talent solves real challenges set by major companies. Our solution was <strong>selected by the company</strong> from all participating teams — validated by Generalitat de Catalunya and CaixaBank.
+      </p>
+      <div class="ach-tags">
+        <span class="ach-tag" data-en="December 2025" data-es="Diciembre 2025">December 2025</span>
+        <span class="ach-tag">Generalitat de Catalunya</span>
+        <span class="ach-tag">CaixaBank</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT CARDS -->
   <div class="proj-grid reveal">
 
-    <!-- PROJECT 1 -->
     <div class="pc">
       <div class="pn">01</div>
       <div class="pt" data-en="Flag Quiz — Fun with Flags" data-es="Quiz de Banderas — Diversión con Banderas">Flag Quiz — Fun with Flags</div>
       <p class="pd"
-        data-en="Interactive web quiz on world flags using the REST Countries API, a custom PHP backend (GET/POST), and SQLite to manage games, rankings and user sessions."
-        data-es="Juego web interactivo de preguntas sobre banderas del mundo, integrando la API REST Countries, una API propia en PHP (GET/POST) y SQLite para partidas, rankings y sesiones de usuario.">
-        Interactive web quiz on world flags using the REST Countries API, a custom PHP backend (GET/POST), and SQLite to manage games, rankings and user sessions.
+        data-en="Interactive web quiz on world flags integrating the REST Countries API, a custom PHP backend (GET/POST), and SQLite to manage games, rankings and user sessions."
+        data-es="Juego web interactivo sobre banderas del mundo con la API REST Countries, backend PHP propio y SQLite para partidas, rankings y sesiones de usuario.">
+        Interactive web quiz on world flags integrating the REST Countries API, a custom PHP backend (GET/POST), and SQLite to manage games, rankings and user sessions.
       </p>
       <div class="ptags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span><span class="ptag">SQLite</span><span class="ptag">REST API</span></div>
-      <div class="plinks">
-        <a href="https://github.com/AminaMustafaa/GuessTheFlag.git" target="_blank">GitHub ↗</a>
-      </div>
+      
     </div>
 
-    <!-- PROJECT 2 -->
     <div class="pc">
       <div class="pn">02</div>
       <div class="pt" data-en="Local / Remote Data Manager" data-es="Gestor de Datos Local / Remoto">Local / Remote Data Manager</div>
       <p class="pd"
-        data-en="CRUD application with MVC architecture managing local data (SQLite) and remote sync (Supabase), featuring search, data export and import — built with Git for version control."
-        data-es="Aplicación CRUD con arquitectura MVC para gestión de datos locales (SQLite) y sincronización remota (Supabase), con búsqueda, exportación e importación de datos usando Git.">
-        CRUD application with MVC architecture managing local data (SQLite) and remote sync (Supabase), featuring search, data export and import — built with Git for version control.
+        data-en="CRUD application with MVC architecture for local data management (SQLite) and remote sync (Supabase), with search, export and import functionality."
+        data-es="Aplicación CRUD con arquitectura MVC para gestión de datos locales (SQLite) y sincronización remota (Supabase), con búsqueda, exportación e importación.">
+        CRUD application with MVC architecture for local data management (SQLite) and remote sync (Supabase), with search, export and import functionality.
       </p>
       <div class="ptags"><span class="ptag">Kotlin</span><span class="ptag">SQLite</span><span class="ptag">Supabase</span><span class="ptag">MVC</span></div>
-      <div class="plinks">
-        <a href="https://github.com/AminaMustafaa/Accessing-Dbs-Local-Remote.git" target="_blank">GitHub ↗</a>
-      </div>
+      
     </div>
 
-    <!-- PROJECT 3 -->
     <div class="pc">
       <div class="pn">03</div>
       <div class="pt" data-en="The Brand New IKEA" data-es="The Brand New IKEA">The Brand New IKEA</div>
       <p class="pd"
-        data-en="A web-based IKEA product catalogue redesign, showcasing front-end layout skills, responsive design and interactive UI components."
-        data-es="Rediseño web del catálogo de productos de IKEA, mostrando habilidades de maquetación front-end, diseño responsive y componentes de UI interactivos.">
-        A web-based IKEA product catalogue redesign, showcasing front-end layout skills, responsive design and interactive UI components.
+        data-en="A web-based IKEA product catalogue redesign showcasing front-end layout skills, responsive design and interactive UI components."
+        data-es="Rediseño web del catálogo de productos de IKEA, mostrando habilidades de maquetación front-end, diseño responsive y componentes interactivos.">
+        A web-based IKEA product catalogue redesign showcasing front-end layout skills, responsive design and interactive UI components.
       </p>
-      <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span></div>
-      <div class="plinks">
-        <a href="https://github.com/AminaMustafaa/TheBrandNewIkea.git" target="_blank">GitHub ↗</a>
-      </div>
-    </div>
-
-    <!-- MORE ON GITHUB -->
-    <div class="more-github reveal">
-      <p data-en="<strong>More projects available</strong> — including a Christmas Robot (OOP/Kotlin), Guess the Number, and more."
-         data-es="<strong>Más proyectos disponibles</strong> — incluyendo un Robot de Navidad (POO/Kotlin), Adivina el Número, y más.">
-        <strong>More projects available</strong> — including a Christmas Robot (OOP/Kotlin), Guess the Number, and more.
-      </p>
-      <a href="https://github.com/AminaMustafaa" target="_blank" class="btn" style="white-space:nowrap"
-         data-en="View GitHub ↗" data-es="Ver GitHub ↗">View GitHub ↗</a>
+      <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">PHP</span><span class="ptag">Sessions</span></div>
+      
     </div>
 
   </div>
+
+  <div class="more-github reveal">
+    <p data-en="<strong>Discover more projects</strong> — Guess the Number, Christmas Robot (OOP/Kotlin), and more."
+       data-es="<strong>Descubre más proyectos</strong> — Adivina el Número, Robot de Navidad (POO/Kotlin) y más.">
+      <strong>Discover more projects</strong>
+    </p>
+    <a href="https://github.com/AminaMustafaa" target="_blank" class="btn" data-en="View GitHub ↗" data-es="Ver GitHub ↗">View GitHub ↗</a>
+  </div>
+
 </section>
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
+<!-- ═══ CONTACT ═══ -->
 <section id="contact">
-  <p class="sec-label reveal" data-en="&#9632; 05 — Contact" data-es="&#9632; 05 — Contacto">&#9632; 05 — Contact</p>
-  <h2 class="reveal" data-en="Let's Connect" data-es="Hablemos">Let's Connect</h2>
-  <p class="csub reveal">
-    <span class="adot"></span>
-    <span data-en="Open to internships, junior roles and interesting collaborations." data-es="Disponible para prácticas, puestos junior y colaboraciones interesantes.">
-      Open to internships, junior roles and interesting collaborations.
-    </span>
+  <p class="sec-label reveal" data-en="05 — Contact" data-es="05 — Contacto">05 — Contact</p>
+  <h2 class="reveal" data-en="Let's Connect" data-es="Conectemos">Let's Connect</h2>
+  <p class="csub reveal"
+    data-en="Open to internships, junior roles and interesting collaborations."
+    data-es="Disponible para prácticas, puestos junior y colaboraciones interesantes.">
+    Open to internships, junior roles and interesting collaborations.
   </p>
   <div class="clinks reveal">
-    <a href="mailto:your@email.com" class="cl" data-en="Email" data-es="Email">Email</a>
-    <a href="#" class="cl" target="_blank" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a>
-    <a href="https://github.com/AminaMustafaa" class="cl" target="_blank" data-en="GitHub" data-es="GitHub">GitHub</a>
+    <a href="mailto:aminamustafa33477@gmail.com" class="cl">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+      aminamustafa33477@gmail.com
+    </a>
+    <a href="https://linkedin.com/in/amina-mustafa" class="cl" target="_blank">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/AminaMustafaa" class="cl" target="_blank">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      GitHub
+    </a>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
   <p>© 2026 Amina Mustafa</p>
   <div class="fdot"></div>
   <p>Barcelona, Spain</p>
 </footer>
-
 
 </body>
 </html>
