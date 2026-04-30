@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<script src="js/script.js" defer></script>
-<link rel="stylesheet" href="css/styles.css">
 <title>Amina Mustafa — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<script src="js/script.js" defer></script>
 </head>
 <body>
 
-<!-- ═══ TOP UTILITY BAR ═══ -->
+<!-- TOP BAR -->
 <div id="topbar">
   <div class="topbar-inner">
     <span class="topbar-name">Amina Mustafa · Portfolio 2026</span>
@@ -19,7 +19,7 @@
         <button id="btnEN" class="on" onclick="setLang('en')">EN</button>
         <button id="btnES" onclick="setLang('es')">ES</button>
       </div>
-      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">
+      <button class="theme-btn" onclick="toggleTheme()">
         <span id="themeIcon">☾</span>
       </button>
       <a href="assets/cv/CV_LatifAnsari,Amina.pdf" download class="resume-btn">
@@ -30,7 +30,7 @@
   </div>
 </div>
 
-<!-- ═══ MAIN NAV ═══ -->
+<!-- MAIN NAV -->
 <nav id="mainnav">
   <div class="nav-inner">
     <div class="logo">AM</div>
@@ -45,11 +45,11 @@
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-tag" data-en="Web Developer &amp; Student" data-es="Desarrolladora Web &amp; Estudiante">Web Developer &amp; Student</div>
+      <div class="hero-tag" data-en="Web Application Development Student" data-es="Estudiante de Desarrollo de Aplicaciones Web">Web Application Development Student</div>
       <h1 data-en="Hi, I'm <span class='acc'>Amina.</span>" data-es="Hola, soy <span class='acc'>Amina.</span>">Hi, I'm <span class="acc">Amina.</span></h1>
       <p class="hero-sub"
         data-en="A web development student focused on building robust, user-centred applications — from database architecture to polished interfaces."
@@ -58,7 +58,7 @@
       </p>
       <div class="cta">
         <a href="#projects" class="btn" data-en="View Projects" data-es="Ver Proyectos">View Projects</a>
-        <a href="#contact"  class="btn ghost" data-en="Get in Touch" data-es="Contactar">Get in Touch</a>
+        <a href="#contact" class="btn ghost" data-en="Get in Touch" data-es="Contactar">Get in Touch</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -69,7 +69,7 @@
 
 <div class="divider"></div>
 
-<!-- ═══ ABOUT ═══ -->
+<!-- ABOUT -->
 <section id="about">
   <p class="sec-label reveal" data-en="01 — About" data-es="01 — Sobre mí">01 — About</p>
   <h2 class="reveal" data-en="Who I Am" data-es="Quién soy">Who I Am</h2>
@@ -94,7 +94,6 @@
         <span class="chip">Kotlin</span>
         <span class="chip">SQL / SQLite</span>
         <span class="chip">Git</span>
-        <span class="chip">Linux</span>
         <span class="chip">Supabase</span>
         <span class="chip">Power BI</span>
         <span class="chip">REST APIs</span>
@@ -115,7 +114,7 @@
 
 <div class="divider"></div>
 
-<!-- ═══ EDUCATION ═══ -->
+<!-- EDUCATION -->
 <section id="education">
   <p class="sec-label reveal" data-en="02 — Education" data-es="02 — Formación">02 — Education</p>
   <h2 class="reveal" data-en="Academic Background" data-es="Formación Académica">Academic Background</h2>
@@ -145,46 +144,47 @@
 
 <div class="divider"></div>
 
-<!-- ═══ EXPERIENCE ═══ -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <p class="sec-label reveal" data-en="03 — Experience" data-es="03 — Experiencia">03 — Experience</p>
   <h2 class="reveal" data-en="Professional Experience" data-es="Experiencia Profesional">Professional Experience</h2>
   <div class="tl reveal">
-
     <div class="ti">
       <div class="ti-meta">
         <span class="ti-date">2025 – Present</span>
         <span class="ti-place">Primark · Barcelona</span>
       </div>
       <div class="ti-title" data-en="Sales Assistant" data-es="Asistente de Ventas">Sales Assistant</div>
-      <ul class="ti-list">
-        <li data-en="Communicated product details to customers in a fast-paced retail environment, developing clear and concise communication skills" data-es="Comunicó detalles de productos en un entorno minorista de ritmo rápido, desarrollando habilidades de comunicación claras y concisas">Communicated product details to customers in a fast-paced retail environment, developing clear and concise communication skills</li>
-        <li data-en="Built trust and managed client relationships across a diverse, international customer base" data-es="Construyó relaciones de confianza con una base de clientes diversa e internacional">Built trust and managed client relationships across a diverse, international customer base</li>
-        <li data-en="Solved customer problems under time pressure, adapting approach to each individual situation" data-es="Resolvió problemas de clientes bajo presión, adaptando el enfoque a cada situación">Solved customer problems under time pressure, adapting approach to each individual situation</li>
-        <li data-en="Maintained visual merchandising standards, demonstrating attention to detail and brand consistency" data-es="Mantuvo estándares de visual merchandising, demostrando atención al detalle y consistencia de marca">Maintained visual merchandising standards, demonstrating attention to detail and brand consistency</li>
+      <ul class="ti-list"
+        data-en-items="Communicated product details to customers in a fast-paced retail environment, developing clear and concise communication skills|Built trust and managed client relationships across a diverse, international customer base|Solved customer problems under time pressure, adapting approach to each individual situation|Maintained visual merchandising standards, demonstrating attention to detail and brand consistency"
+        data-es-items="Comunicó detalles de productos en un entorno minorista de ritmo rápido, desarrollando habilidades de comunicación claras|Construyó relaciones de confianza con una base de clientes diversa e internacional|Resolvió problemas de clientes bajo presión, adaptando el enfoque a cada situación|Mantuvo estándares de visual merchandising, demostrando atención al detalle">
+        <li>Communicated product details to customers in a fast-paced retail environment, developing clear and concise communication skills</li>
+        <li>Built trust and managed client relationships across a diverse, international customer base</li>
+        <li>Solved customer problems under time pressure, adapting approach to each individual situation</li>
+        <li>Maintained visual merchandising standards, demonstrating attention to detail and brand consistency</li>
       </ul>
     </div>
-
     <div class="ti">
       <div class="ti-meta">
         <span class="ti-date">2024 – 2025</span>
         <span class="ti-place">Condis · Barcelona</span>
       </div>
       <div class="ti-title" data-en="Cashier" data-es="Cajera">Cashier</div>
-      <ul class="ti-list">
-        <li data-en="Managed high-volume transactions accurately while working to daily performance targets" data-es="Gestionó transacciones de alto volumen con precisión, cumpliendo objetivos diarios de rendimiento">Managed high-volume transactions accurately while working to daily performance targets</li>
-        <li data-en="Resolved customer complaints calmly and efficiently, demonstrating problem-solving under pressure" data-es="Resolvió reclamaciones de clientes de forma calmada y eficiente, demostrando resolución de problemas bajo presión">Resolved customer complaints calmly and efficiently, demonstrating problem-solving under pressure</li>
-        <li data-en="Collaborated with team members during peak hours to maintain consistent service quality" data-es="Colaboró con compañeros durante horas pico para mantener una calidad de servicio constante">Collaborated with team members during peak hours to maintain consistent service quality</li>
-        <li data-en="Built rapport with regular customers, strengthening interpersonal and adaptability skills" data-es="Estableció relaciones con clientes habituales, fortaleciendo habilidades interpersonales y de adaptabilidad">Built rapport with regular customers, strengthening interpersonal and adaptability skills</li>
+      <ul class="ti-list"
+        data-en-items="Managed high-volume transactions accurately while working to daily performance targets|Resolved customer complaints calmly and efficiently, demonstrating problem-solving under pressure|Collaborated with team members during peak hours to maintain consistent service quality|Built rapport with regular customers, strengthening interpersonal and adaptability skills"
+        data-es-items="Gestionó transacciones de alto volumen con precisión, cumpliendo objetivos diarios|Resolvió reclamaciones de clientes de forma calmada y eficiente, demostrando resolución bajo presión|Colaboró con compañeros durante horas pico para mantener la calidad del servicio|Estableció relaciones con clientes habituales, fortaleciendo habilidades interpersonales">
+        <li>Managed high-volume transactions accurately while working to daily performance targets</li>
+        <li>Resolved customer complaints calmly and efficiently, demonstrating problem-solving under pressure</li>
+        <li>Collaborated with team members during peak hours to maintain consistent service quality</li>
+        <li>Built rapport with regular customers, strengthening interpersonal and adaptability skills</li>
       </ul>
     </div>
-
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ═══ PROJECTS ═══ -->
+<!-- PROJECTS -->
 <section id="projects">
   <p class="sec-label reveal" data-en="04 — Projects" data-es="04 — Proyectos">04 — Projects</p>
   <h2 class="reveal" data-en="What I've Built" data-es="Lo que he construido">What I've Built</h2>
@@ -195,11 +195,11 @@
       <img src="assets/images/24hInnovacion.png" alt="24h d'Innovació"/>
     </div>
     <div class="ach-content">
-      <div class="ach-badge" data-en="&#11088; Featured Achievement" data-es="&#11088; Logro Destacado">&#11088; Featured Achievement</div>
-      <div class="ach-title" data-en="24h d'Innovació — ITB" data-es="24h d'Innovació — ITB">24h d'Innovació — ITB</div>
+      <div class="ach-badge" data-en="⭐ Featured Achievement" data-es="⭐ Logro Destacado">⭐ Featured Achievement</div>
+      <div class="ach-title">24h d'Innovació — ITB</div>
       <p class="ach-desc"
         data-en="Participated in a 24-hour innovation hackathon where FP talent solves real challenges set by major companies. Our solution was <strong>selected by the company</strong> from all participating teams — validated by Generalitat de Catalunya and CaixaBank."
-        data-es="Participé en un hackathon de innovación de 24h donde el talento de FP resuelve retos reales de grandes empresas. Nuestra solución fue <strong>seleccionada por la empresa</strong> entre todos los equipos — validada por la Generalitat de Catalunya y CaixaBank.">
+        data-es="Participé en un hackathon de innovación de 24h donde el talento de FP resuelve retos de grandes empresas. Nuestra solución fue <strong>seleccionada por la empresa</strong> entre todos los equipos — validada por la Generalitat de Catalunya y CaixaBank.">
         Participated in a 24-hour innovation hackathon where FP talent solves real challenges set by major companies. Our solution was <strong>selected by the company</strong> from all participating teams — validated by Generalitat de Catalunya and CaixaBank.
       </p>
       <div class="ach-tags">
@@ -210,9 +210,8 @@
     </div>
   </div>
 
-  <!-- PROJECT CARDS -->
+  <!-- CARDS -->
   <div class="proj-grid reveal">
-
     <div class="pc">
       <div class="pn">01</div>
       <div class="pt" data-en="Flag Quiz — Fun with Flags" data-es="Quiz de Banderas — Diversión con Banderas">Flag Quiz — Fun with Flags</div>
@@ -222,9 +221,8 @@
         Interactive web quiz on world flags integrating the REST Countries API, a custom PHP backend (GET/POST), and SQLite to manage games, rankings and user sessions.
       </p>
       <div class="ptags"><span class="ptag">PHP</span><span class="ptag">JavaScript</span><span class="ptag">SQLite</span><span class="ptag">REST API</span></div>
-      
+      <div class="plinks"><a href="https://github.com/AminaMustafaa/GuessTheFlag" target="_blank">GitHub ↗</a></div>
     </div>
-
     <div class="pc">
       <div class="pn">02</div>
       <div class="pt" data-en="Local / Remote Data Manager" data-es="Gestor de Datos Local / Remoto">Local / Remote Data Manager</div>
@@ -234,9 +232,8 @@
         CRUD application with MVC architecture for local data management (SQLite) and remote sync (Supabase), with search, export and import functionality.
       </p>
       <div class="ptags"><span class="ptag">Kotlin</span><span class="ptag">SQLite</span><span class="ptag">Supabase</span><span class="ptag">MVC</span></div>
-      
+      <div class="plinks"><a href="https://github.com/AminaMustafaa/Accessing-Dbs-Local-Remote" target="_blank">GitHub ↗</a></div>
     </div>
-
     <div class="pc">
       <div class="pn">03</div>
       <div class="pt" data-en="The Brand New IKEA" data-es="The Brand New IKEA">The Brand New IKEA</div>
@@ -245,28 +242,26 @@
         data-es="Rediseño web del catálogo de productos de IKEA, mostrando habilidades de maquetación front-end, diseño responsive y componentes interactivos.">
         A web-based IKEA product catalogue redesign showcasing front-end layout skills, responsive design and interactive UI components.
       </p>
-      <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">PHP</span><span class="ptag">Sessions</span></div>
-      
+      <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span></div>
+      <div class="plinks"><a href="https://github.com/AminaMustafaa/TheBrandNewIkea" target="_blank">GitHub ↗</a></div>
     </div>
-
   </div>
 
   <div class="more-github reveal">
     <p data-en="<strong>Discover more projects</strong> — Guess the Number, Christmas Robot (OOP/Kotlin), and more."
        data-es="<strong>Descubre más proyectos</strong> — Adivina el Número, Robot de Navidad (POO/Kotlin) y más.">
-      <strong>Discover more projects</strong>
+      <strong>Discover more projects</strong> — Guess the Number, Christmas Robot (OOP/Kotlin), and more.
     </p>
     <a href="https://github.com/AminaMustafaa" target="_blank" class="btn" data-en="View GitHub ↗" data-es="Ver GitHub ↗">View GitHub ↗</a>
   </div>
-
 </section>
 
 <div class="divider"></div>
 
-<!-- ═══ CONTACT ═══ -->
+<!-- CONTACT -->
 <section id="contact">
   <p class="sec-label reveal" data-en="05 — Contact" data-es="05 — Contacto">05 — Contact</p>
-  <h2 class="reveal" data-en="Let's Connect" data-es="Conectemos">Let's Connect</h2>
+  <h2 class="reveal" data-en="Let's Connect" data-es="Hablemos">Let's Connect</h2>
   <p class="csub reveal"
     data-en="Open to internships, junior roles and interesting collaborations."
     data-es="Disponible para prácticas, puestos junior y colaboraciones interesantes.">
@@ -288,7 +283,7 @@
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Amina Mustafa</p>
   <div class="fdot"></div>
